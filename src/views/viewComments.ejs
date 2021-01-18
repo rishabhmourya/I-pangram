@@ -1,0 +1,55 @@
+<%- include('partials/header'); -%>
+  <div id="changeBg">
+    <%if (success !='' ){%>
+        
+      <div class="alert alert-primary" role="alert">
+        <%= success%>
+      
+      </div>
+      <%}%>
+
+        <%if ( error !='' ){%>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>
+              <%= error %>
+            </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%}%>
+            <div class="container">
+              <% if ( typeof data[0] !== 'undefined') { %>
+                <% console.log(data[0].addCommentText) %>                
+                <br>
+                <h5 class="text-center" style="color: blueviolet;" > These are the comments from the various peoples </h5>
+           <br><br>
+               
+                <% for (let index = 0; index < data.length; index++) { %>
+                 <br>
+                 <hr>   
+                 <p><%=`Comment : ${data[index].addCommentText}` %> <br> <%= `Commented By:  ${data[index].name}` %> </p>
+                 <hr> 
+                 <% } %>
+                      
+              <% } else { %>
+
+<br><br><br><br><br><br><br>
+                <h4 class="text-center">No Comments Yet</h4>
+
+                <% }  %>
+             
+            </div>
+
+
+            <% for (let index=0; index < 15; index++) { %>
+              <br>
+
+              <% } %>
+
+  </div>
+
+  </div>
+  </body>
+
+  </div>

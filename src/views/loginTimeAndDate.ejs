@@ -1,0 +1,51 @@
+<%- include('partials/header'); -%>
+  <%if (success != ''){%>
+<div style="margin-top: 30px;" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong><%=  success%></strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<%}%>
+
+    <%if ( error != ''){%>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong><%=  error %></strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<%}%>
+<div class="container">
+
+
+  <div class="row">
+    <div style="margin-bottom: 10px;" id="" class="carousel slide col-lg-6 col-sm-6 col-6  " data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          
+            <img  class="d-block img-fluid " src="https://i.imgur.com/FVYmlbe.png"
+              alt="">
+        </div>
+
+      </div>
+    </div>
+    <div style="margin-bottom: 10px;" id="" class="carousel slide col-lg-6 col-sm-6 col-6  " data-ride="carousel">
+        <h5 id="evaluation_login" class="text-center" > Profile Information </h5>
+        <br>    
+        <ul>
+            <li> First Name: <%= data.firstName    %></li>
+            <li> Last Name: <%=  data.lastName  %></li>   
+            <li> Email: <%=data.email    %></li>
+            <li> Registration Date: <%=data.regDate%></li>
+            <li> Last Login/Active: <%=   data.loginTime %></li>
+        </ul>
+        
+      </div>
+  </div>
+
+
+</div>
+
+
+

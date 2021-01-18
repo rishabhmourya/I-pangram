@@ -1,0 +1,172 @@
+/* search */
+
+* {
+  box-sizing: border-box;
+}
+
+#evaluation_login{
+
+  margin-top: 25%;
+  color: #0b7dda;
+}
+#evaluation_dontHave{
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnailProfileImage{
+  height: 150px;
+  width: 120px;
+  margin-left: 25%;
+  border-radius: 27%;
+}
+#changeBg{
+  background-color: whitesmoke;
+}
+.card{
+  margin-left: 12px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 12px;
+  border-radius: 5%;
+}
+.card-text{
+  padding-left: 5px;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid rgb(131, 181, 246);
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-radius: 25px;
+
+}
+
+form.exampleNew input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid rgb(131, 181, 246);
+  float: left;
+  width: 30%;
+  background: #f1f1f1;
+  border-radius: 25px;
+
+}
+
+form.exampleNew button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #baf065;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; 
+  cursor: pointer;
+  border-radius: 25px;
+  
+}
+
+form.exampleNew button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; 
+  cursor: pointer;
+  border-radius: 25px;
+  
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body {
+  
+  padding-bottom: 54px;
+  background-color: rgb(167, 165, 165);
+  background-image: linear-gradient(.25turn,rgb(255, 255, 255), 80%, rgb(255, 255, 255));
+}
+
+/* view priduct in details start */
+
+
+#homeNavButton{
+  color: black;
+  font-size:25px;
+  size: 10px;  
+  font-family:"";
+  
+}
+.navbar-brand{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+}
+#homeNavButtonLogoLogin{
+  color: black;
+  font-size:15px;
+  font-weight: 700;
+  size: 10px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+.sidenav a {
+  /* padding: 8px 8px 8px 32px; */
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(102,102,102,.85);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+

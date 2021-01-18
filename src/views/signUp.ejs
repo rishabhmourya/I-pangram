@@ -1,0 +1,100 @@
+<%- include('partials/header'); -%>
+  <%if (success != ''){%>
+<div style="margin-top: 30px;" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong><%=  success%></strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<%}%>
+
+    <%if ( error != ''){%>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong><%=  error %></strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<%}%>
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div style="margin-bottom: 10px;" id="" class="carousel slide col-lg-6 col-sm-6 col-6  " data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          
+            <img  class="d-block img-fluid " src="https://i.imgur.com/drlVga5.png "
+              alt="First slide">
+        </div>
+
+      </div>
+    </div>
+    <div  id="carouselExampleIndicators" class="carousel slide col-lg-6 col-sm-6 col-6">
+      <h4 id="evaluation_login"  class="text-center"> Sign-Up </h4>
+      <h6 id="evaluation_dontHave" class="text-center">Already have an account? <a href="/">Login Here</a> </h6> 
+    
+      <form name="signUpForm" action="/auth/signUp" method="POST">
+        <form>
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input name="firstName" type="text" id="form3Example1" class="form-control" />
+                <label class="form-label"  for="form3Example1">First name</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input name="lastName" type="text" id="form3Example2" class="form-control" />
+                <label class="form-label" for="form3Example2">Last name</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input name="city" type="text" id="form3Example2" class="form-control" />
+                <label class="form-label" for="form3Example2">city</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input name="state" type="text" id="form3Example2" class="form-control" />
+                <label class="form-label" for="form3Example2">state</label>
+              </div>
+            </div>
+
+
+          </div>
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input name="email" type="email" id="form3Example3" class="form-control" />
+            <label class="form-label" for="form3Example3">Email address</label>
+          </div>
+        
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input name="password" type="password" id="form3Example4" class="form-control" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+        
+          <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+        
+          </div>
+        
+          <!-- Submit button -->
+          
+          
+        </form>
+      </form>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+

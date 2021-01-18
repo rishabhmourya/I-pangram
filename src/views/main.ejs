@@ -1,0 +1,71 @@
+<%- include('partials/header'); -%>
+  <div id="changeBg">
+    <%if (success !='' ){%>
+        
+      <div class="alert alert-primary" role="alert">
+        <%= success%>
+      
+      </div>
+      <%}%>
+
+        <%if ( error !='' ){%>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>
+              <%= error %>
+            </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%}%>
+            <div class="container">
+              <br>
+
+
+              <h5 class="text-center">Hello   <span style="color: blue"><%=`${currentUser.firstName} ${currentUser.lastName}`%></span>    </h5>
+          <br>      
+                <form class="example"  action="/addPost" method="POST" >
+                  <input type="text" placeholder="What is in your mind?" name="addPost" > 
+                 <button type="submit"><i class=""> Post Now </i></button>
+               </form>
+          
+
+<% for (let index = 0; index < data.length; index++) { %>
+<br>  
+  <hr>
+   <p> <%= data[index].addPost %> <br> --Posted By <%= data[index].name %>
+    
+    <a style="margin-left: 30px;" class="btn btn-sm btn-success" href="/like/<%=data[index]._id%>">Like</a>
+    <a style="margin-left: 100px;" class="btn btn-sm btn-secondary" href="/viewLike/<%=data[index]._id%>">View Likes</a>
+    <a style="margin-left: 30px;" class="btn btn-sm btn-secondary" href="/viewComment/<%=data[index]._id%>">View Comments</a>
+    
+    <% if (data[index].email == currentUser.email ) { %>
+
+      <a style="margin-left: 50px;" class="btn btn-sm btn-danger"  href="/deletePost/<%=data[index]._id%>">Delete Post</a>
+  
+     <% } %> 
+
+    <form class="exampleNew" action="/addComment" method="POST">
+    <input type="hidden" name="id" value="<%=data[index]._id %>" />
+    <input type="text" placeholder="Add comment here" name="addCommentText" > 
+    <button  type="submit"><i class=""> Comment Now </i></button>
+  </form>    
+
+    </p> 
+<br><br>
+  <hr>
+
+  <% } %>
+</div>
+
+            <% for (let index=0; index < 20; index++) { %>
+              <br>
+
+              <% } %>
+
+  </div>
+
+  </div>
+  </body>
+
+  </div>

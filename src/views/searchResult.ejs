@@ -1,0 +1,59 @@
+<%- include('partials/header'); -%>
+  <div id="changeBg">
+    <%if (success !='' ){%>
+        
+      <div class="alert alert-primary" role="alert">
+        <%= success%>
+      
+      </div>
+      <%}%>
+
+        <%if ( error !='' ){%>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>
+              <%= error %>
+            </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%}%>
+            <div class="container">
+              <br>
+             <h5 class="text-center" style="color: blueviolet;" > Here are your search results </h5>
+<br><br>
+             <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Send Req</th>
+                  </tr>
+                </thead>
+                <tbody>
+             <% for (let index = 0; index < items.length; index++) { %>
+                    <tr>
+                    <td><%= items[index].firstName %></td>
+                    <td><%= items[index].lastName %></td>
+                    <td><a class="btn btn-sm btn-success" href="/sendReq/<%=items[index]._id%>"> Send Request </a></td>
+          
+                  </tr>  
+              
+              <% } %>
+                </tbody>
+            </table>
+                   
+            </div>
+
+
+            <% for (let index=0; index < 15; index++) { %>
+              <br>
+
+              <% } %>
+
+  </div>
+
+  </div>
+  </body>
+
+  </div>
